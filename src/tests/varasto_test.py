@@ -62,6 +62,7 @@ class TestVarasto(unittest.TestCase):
         self.varasto.ota_varastosta(-1)
         self.assertAlmostEqual(self.varasto.saldo, alussa)
 
+    # tyhjennetään varasto
     def test_ota_varastosta_enemman_kuin_saldo(self):
         maara = self.varasto.tilavuus + 1
         self.varasto.ota_varastosta(maara)
